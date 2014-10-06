@@ -11,5 +11,9 @@ namespace Geometriska_Figurer
         static void Main(string[] args)
         {
         }
+        private static Shape CreateShape(ShapeType shapeType)
+        {
+            return shape;
+        }
     }
 }
