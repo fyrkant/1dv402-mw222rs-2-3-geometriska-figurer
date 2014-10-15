@@ -8,7 +8,7 @@ namespace Geometriska_Figurer
 {
     class Rectangle : Shape
     {
-        public double Area
+        public override double Area
         {
             get
             {
@@ -16,7 +16,7 @@ namespace Geometriska_Figurer
             }            
         }
 
-        public double Perimeter
+        public override double Perimeter
         {
             get 
             {
