@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace Geometriska_Figurer
 {
+    enum ShapeType
+    {
+        Ellipse,
+        Rectangle
+    }
+
     public abstract class Shape
     {
         // De två privata fälten representerande längd respektive bredd. 
@@ -62,10 +68,5 @@ namespace Geometriska_Figurer
         {
             return String.Format("Längd  : \t{0}\nBredd  : \t{1}\nOmkrets: \t{2}\nArea   : \t{3}", Length, Width, Perimeter, Area);
         }
-    }
-    enum ShapeType
-    {
-        Ellipse,
-        Rectangle
     }
 }
