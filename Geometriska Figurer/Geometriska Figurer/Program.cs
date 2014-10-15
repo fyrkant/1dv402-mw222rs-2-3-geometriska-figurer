@@ -13,8 +13,10 @@ namespace Geometriska_Figurer
             bool loop = true;
             while (loop == true)
             {
+                // Visa menyn.
                 ViewMenu();
 
+                // Låt användaren välja.
                 int menuSwitch;
                 if (int.TryParse(Console.ReadLine(), out menuSwitch) && menuSwitch >= 0 && menuSwitch < 3)
                 {
@@ -22,7 +24,7 @@ namespace Geometriska_Figurer
                     {
                         case 0:
                             loop = false;
-                            break;
+                            continue;
                         case 1:
                             ViewShapeDetail(CreateShape(ShapeType.Ellipse));
                             break;
@@ -30,13 +32,12 @@ namespace Geometriska_Figurer
                             ViewShapeDetail(CreateShape(ShapeType.Rectangle));
                             break;
                     }
-
                 }
                 else
                 {
                     Console.BackgroundColor = ConsoleColor.Red;
                     Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine("\nFEL! Ange ett nummer mellan 0 och 2.", menuSwitch);
+                    Console.WriteLine("\nFEL! Ange ett heltal mellan 0 och 2.", menuSwitch);
                     Console.ResetColor();
                 }
 
@@ -49,9 +50,7 @@ namespace Geometriska_Figurer
                 Console.ReadKey(true);
                 Console.CursorVisible = true;
                 Console.Clear(); 
-            }
-
-           
+            }           
         }
 
         // Privat statisk metod som läser in en figurs längd och bredd, skapar objektet och returnerar en referens till det. 
