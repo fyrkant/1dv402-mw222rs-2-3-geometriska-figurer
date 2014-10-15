@@ -13,7 +13,7 @@ namespace Geometriska_Figurer
         private double _width;
 
         public abstract double Area
-        { get { return (_length* _width); } }
+        { get; }
 
         public double Length
         { get; set; }
